@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class PolicyAlgorithmDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'policy_id' => 'policyId', 'algo_id' => 'algoId' ];
+    private const COL_TO_PROP = [ 'policy_id' => 'policyId', 'algo_id' => 'algoId', 'role' => 'role', 'weight' => 'weight', 'priority' => 'priority' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];

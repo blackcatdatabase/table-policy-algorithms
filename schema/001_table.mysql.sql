@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.yaml (map@94ebe6c)
+-- Auto-generated from schema-map-mysql.yaml (map@4ae85c5)
 -- engine: mysql
 -- table:  policy_algorithms
 
@@ -8,5 +8,7 @@ CREATE TABLE IF NOT EXISTS policy_algorithms (
   role ENUM('kem','sig','hash','symmetric') NOT NULL,
   weight INT NOT NULL DEFAULT 1,
   priority INT NOT NULL DEFAULT 0,
+  created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
   PRIMARY KEY (policy_id, algo_id, role)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;

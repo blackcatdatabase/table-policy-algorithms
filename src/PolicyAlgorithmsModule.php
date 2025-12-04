@@ -40,7 +40,9 @@ SELECT
   algo_id,
   role,
   weight,
-  priority
+  priority,
+  created_at,
+  updated_at
 FROM policy_algorithms;
 SQL;
         } else {
@@ -51,7 +53,9 @@ SELECT
   algo_id,
   role,
   weight,
-  priority
+  priority,
+  created_at,
+  updated_at
 FROM policy_algorithms;
 SQL;
         }

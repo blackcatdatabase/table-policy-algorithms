@@ -1,4 +1,4 @@
--- Auto-generated from schema-views-mysql.yaml (map@94ebe6c)
+-- Auto-generated from schema-views-mysql.yaml (map@4ae85c5)
 -- engine: mysql
 -- table:  policy_algorithms
 
@@ -9,5 +9,7 @@ SELECT
   algo_id,
   role,
   weight,
-  priority
+  priority,
+  created_at,
+  updated_at
 FROM policy_algorithms;

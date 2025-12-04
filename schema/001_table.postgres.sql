@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.yaml (map@94ebe6c)
+-- Auto-generated from schema-map-postgres.yaml (map@4ae85c5)
 -- engine: postgres
 -- table:  policy_algorithms
 
@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS policy_algorithms (
   role TEXT NOT NULL,                        -- 'kem' | 'sig' | 'hash' | 'symmetric'
   weight INTEGER NOT NULL DEFAULT 1,
   priority INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   PRIMARY KEY (policy_id, algo_id, role),
   CONSTRAINT chk_pa_role CHECK (role IN ('kem','sig','hash','symmetric'))
 );

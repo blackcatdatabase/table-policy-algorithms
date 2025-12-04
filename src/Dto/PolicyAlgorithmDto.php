@@ -14,7 +14,9 @@ final class PolicyAlgorithmDto implements \JsonSerializable {
         public readonly int $algoId,
         public readonly string $role,
         public readonly int $weight,
-        public readonly int $priority
+        public readonly int $priority,
+        public readonly \DateTimeImmutable $createdAt,
+        public readonly \DateTimeImmutable $updatedAt
     ) {}
 
     /** Suitable for serialization/logging (without large blobs). */

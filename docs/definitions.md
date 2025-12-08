@@ -5,11 +5,11 @@ Weights and priorities for algorithms used within an encryption policy.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| algo_id |  | NO |  | Algorithm id (FK crypto_algorithms.id). |
+| algo_id | BIGINT | NO |  | Algorithm id (FK crypto_algorithms.id). |
 | policy_id | BIGINT | NO |  | Encryption policy id (FK encryption_policies.id). |
-| priority | INTEGER | NO | 0 | Fallback/ordering priority. |
-| role | TEXT | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |
-| weight | INTEGER | NO | 1 | Selection weight. |
+| priority | INT | NO | 0 | Fallback/ordering priority. |
+| role | ENUM('kem','sig','hash','symmetric') | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |
+| weight | INT | NO | 1 | Selection weight. |
 
 ## Engine Details
 
@@ -34,5 +34,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_policy_algorithms | mysql | algorithm=MERGE, security=INVOKER | [packages\policy-algorithms\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/policy-algorithms/schema/040_views.mysql.sql) |
-| vw_policy_algorithms | postgres |  | [packages\policy-algorithms\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/policy-algorithms/schema/040_views.postgres.sql) |
+| vw_policy_algorithms | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_policy_algorithms | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |

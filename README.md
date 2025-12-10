@@ -99,8 +99,8 @@ _No engine differences detected._
 
 ## Constraints Snapshot
 - `priority` – default=0
-- `weight` – default=1
 - `role` – enum
+- `weight` – default=1
 
 ## Schema Files
 | File | Engine |

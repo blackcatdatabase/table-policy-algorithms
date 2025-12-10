@@ -7,9 +7,9 @@ Weights and priorities for algorithms used within an encryption policy.
 | --- | --- | --- | --- | --- |
 | algo_id | BIGINT | NO |  | Algorithm id (FK crypto_algorithms.id). |
 | policy_id | BIGINT | NO |  | Encryption policy id (FK encryption_policies.id). |
-| priority | INT | NO | 0 | Fallback/ordering priority. |
-| role | ENUM('kem','sig','hash','symmetric') | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |
-| weight | INT | NO | 1 | Selection weight. |
+| priority | mysql: INT / postgres: INTEGER | NO | 0 | Fallback/ordering priority. |
+| role | mysql: ENUM('kem','sig','hash','symmetric') / postgres: TEXT | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |
+| weight | mysql: INT / postgres: INTEGER | NO | 1 | Selection weight. |
 
 ## Engine Details
 

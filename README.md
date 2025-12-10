@@ -17,7 +17,7 @@
 | What | Link | Notes |
 | --- | --- | --- |
 | Schema map | [schema-map-postgres.yaml](https://github.com/blackcatacademy/blackcat-database/blob/main/scripts/schema/schema-map-postgres.yaml) | Source for table metadata |
-| Pkg folder | [packages\policy-algorithms](https://github.com/blackcatacademy/blackcat-database/blob/main/packages\policy-algorithms) | Repo location |
+| Pkg folder | [packages\policy-algorithms](https://github.com/blackcatacademy/blackcat-database/blob/main/packages/policy-algorithms) | Repo location |
 | Definitions | [docs/definitions.md](docs/definitions.md) | Column/index/FK docs |
 | Engine differences | [docs/definitions.md#engine-differences](docs/definitions.md#engine-differences) | Drift section in definitions |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) | Recent changes |
@@ -99,8 +99,8 @@ _No engine differences detected._
 
 ## Constraints Snapshot
 - `priority` – default=0
-- `role` – enum
 - `weight` – default=1
+- `role` – enum
 
 ## Schema Files
 | File | Engine |

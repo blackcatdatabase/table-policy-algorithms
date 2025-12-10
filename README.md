@@ -98,9 +98,9 @@ graph LR
 _No engine differences detected._
 
 ## Constraints Snapshot
-- `priority` – default=0
 - `role` – enum
 - `weight` – default=1
+- `priority` – default=0
 
 ## Schema Files
 | File | Engine |

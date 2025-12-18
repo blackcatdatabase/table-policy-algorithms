@@ -3,13 +3,15 @@
 Weights and priorities for algorithms used within an encryption policy.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| policy_id | BIGINT | NO |  | Encryption policy id (FK encryption_policies.id). |
-| algo_id | BIGINT | NO |  | Algorithm id (FK crypto_algorithms.id). |
-| role | mysql: ENUM('kem','sig','hash','symmetric') / postgres: TEXT | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |
-| weight | mysql: INT / postgres: INTEGER | NO | 1 | Selection weight. |
-| priority | mysql: INT / postgres: INTEGER | NO | 0 | Fallback/ordering priority. |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| policy_id | BIGINT | NO |  | Encryption policy id (FK encryption_policies.id). |  |
+| algo_id | mysql: BIGINT | NO |  | Algorithm id (FK crypto_algorithms.id). |  |
+| role | mysql: ENUM('kem','sig','hash','symmetric') / postgres: TEXT | NO |  | Role played by the algorithm. (enum: kem, sig, hash, symmetric) |  |
+| weight | mysql: INT / postgres: INTEGER | NO | 1 | Selection weight. |  |
+| priority | mysql: INT / postgres: INTEGER | NO | 0 | Fallback/ordering priority. |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |  |
 
 ## Engine Details
 

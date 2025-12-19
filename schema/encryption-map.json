@@ -1,0 +1,29 @@
+{
+  "tables": {
+    "policy_algorithms": {
+      "columns": {
+        "algo_id": {
+          "strategy": "passthrough"
+        },
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "policy_id": {
+          "strategy": "passthrough"
+        },
+        "priority": {
+          "strategy": "passthrough"
+        },
+        "role": {
+          "strategy": "passthrough"
+        },
+        "updated_at": {
+          "strategy": "passthrough"
+        },
+        "weight": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
